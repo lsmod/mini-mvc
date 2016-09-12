@@ -1,2 +1,2 @@
-# php-mvc
-minimalist php mvc framework under GNU LESSER GENERAL PUBLIC LICENSE
+# mini-mvc
+Minimalist php mvc library under GNU LESSER GENERAL PUBLIC LICENSE
