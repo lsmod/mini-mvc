@@ -48,7 +48,7 @@ class DBmySQLi
       if(!$this->connexion = @mysqli_connect($server, $login, $pass, $base))
          throw new Exception ('DB server connexion error');
 
-      mysqli_query("SET NAMES 'utf8'", $this->connexion);
+      mysqli_query($this->connexion, "SET NAMES 'utf8'");
 
       // if we are in auto-escape mode we normalise...
       if(get_magic_quotes_gpc()):
