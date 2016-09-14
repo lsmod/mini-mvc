@@ -75,7 +75,7 @@ try {
   $controller = new simpleController("action", $db);
   content =  $controller->display();
    
-  // include template show the page
+  // include template and show the page
   require_once('template/index.php');
 }
 catch (Exception $e) {
