@@ -33,7 +33,7 @@ class Controller
    /**
     * 
     * @param string $actionName http parametter name used to call controller action (ex: ?action=delete, ?decision=delete)
-    * @param object $db DBO object of your choice (will be used by models)
+    * @param object $db DAO object of your choice (will be used by models)
     * @param string $forcedAction if define this action will be call regarless of http param sent by users
     */
    public function __construct($actionName, $db = null, $forcedAction = null)

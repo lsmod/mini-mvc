@@ -22,7 +22,7 @@
  */ 
  
 /**
- * DBO class
+ * DAO class
  */
 class DBmySQLi
 {
@@ -52,11 +52,11 @@ class DBmySQLi
 
       // if we are in auto-escape mode we normalise...
       if(get_magic_quotes_gpc()):
-         $_POST = $this->NormalisationHTTP($_POST);
-         $_GET = $this->NormalisationHTTP($_GET);
-         $_REQUEST = $this->NormalisationHTTP($_REQUEST);
-         $_COOKIE = $this->NormalisationHTTP($_COOKIE);
-         $_SERVER = $this->NormalisationHTTP($_SERVER);
+         $_POST = $this->normaliseHTTP($_POST);
+         $_GET = $this->normaliseHTTP($_GET);
+         $_REQUEST = $this->normaliseHTTP($_REQUEST);
+         $_COOKIE = $this->normaliseHTTP($_COOKIE);
+         $_SERVER = $this->normaliseHTTP($_SERVER);
       endif;
    }
 
@@ -202,7 +202,7 @@ class DBmySQLi
     * 
     * @param array $tableau
     */
-   private function NormalisationHTTP($tableau)
+   private function normaliseHTTP($tableau)
    {
       assert('isset($tableau); //* $tableau should be set');
       
@@ -210,7 +210,7 @@ class DBmySQLi
          if (!is_array($valeur)) 
             $tableau[$cle] = stripSlashes($valeur);
          else  
-            $tableau[$cle] = $this->NormalisationHTTP($valeur);
+            $tableau[$cle] = $this->normaliseHTTP($valeur);
       endforeach;      
       return $tableau;
    }

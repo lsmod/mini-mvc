@@ -35,9 +35,8 @@ function getGet($name, $type)
    assert('is_string($name); //* $name should be a string');
    assert('is_string($type); //* $name should be a string');
 
-   if(isSet($_GET[$name]))
-   {
-   switch ($type)
+   if(isSet($_GET[$name])):
+      switch ($type)
       {
          case 'int':
             return (int) $_GET[$name] + 0;
@@ -57,9 +56,9 @@ function getGet($name, $type)
          default:
             throw new Exception("$type is not a valid type");
       }
-   }
-   else
+   else:
       return null;
+   endif;
 }
 
 /**
@@ -75,8 +74,7 @@ function getPost($name, $type)
    assert('is_string($name); //* $name should be a string');
    assert('is_string($type); //* $name should be a string');
 
-   if(isSet($_POST[$name]))
-   {
+   if(isSet($_POST[$name])):
       switch ($type)
       {
          case 'int':
@@ -97,9 +95,9 @@ function getPost($name, $type)
          default:
             throw new Exception("$type is not a valid type");
       }
-   }
-   else
+   else:
       return null;
+   endif;
 }
 
 /**
@@ -114,13 +112,11 @@ function is_empty($param)
    if(is_null($param)):
       return true;
    elseif(is_string($param)):
-      if(empty($param)):
+      if(empty($param))
          return true;
-      endif;
    elseif(is_array($param)):
-      if(count($param) == 0):         
+      if(count($param) == 0)        
          return true;
-      endif;
    else:
       return false;
    endif;
