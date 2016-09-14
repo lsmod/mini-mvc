@@ -34,7 +34,7 @@ action_post is for POST request<br/>
 (index.php?execute=hello)<br/>
 The HTTP param name is define at controller instanciation.
 ```php
-// here would user index.php?action=hello to call hello function
+// here user would use index.php?action=hello to call hello function
 $controller = new simpleController("action", $db); 
 ```
 ###Model:###
