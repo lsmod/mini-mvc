@@ -28,6 +28,7 @@ class simpleController extends controller
    }
 }
 ```
+
 Every action that user are allowed to call has to be declare in **$action_get** or **$action_get** member.<br/>
 action_get is for GET resquet <br/>
 action_post is for POST request<br/>
@@ -51,6 +52,16 @@ class nameModel extends Model
 ?>
 ```
 
+###Views:###
+index.php (in inc/views/)
+```php
+Hello you!
+```
+name.php (in inc/views/)
+```php
+Hello <?php echo $this->view_data->name; ?>
+```
+
 ###Html Page:###
 index.php (directly executed/visited by users)
 ```php
@@ -71,6 +82,7 @@ catch (Exception $e) {
   echo $e;
 }
 ```
+
 ###Html template:###
 template/index.php
 ```php
