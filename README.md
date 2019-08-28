@@ -1,9 +1,9 @@
 # mini-mvc
 Minimalist php mvc library under GNU LESSER GENERAL PUBLIC LICENSE
 
-##Usage example##
+## Usage example
 
-###Controller:###
+### Controller:
 simpleController.php (in inc/controllers/)
 ```php
 require_once('../../controller.php');
@@ -38,7 +38,7 @@ The HTTP param name is define at controller instanciation.
 // here user would use index.php?action=hello to call hello function
 $controller = new simpleController("action", $db); 
 ```
-###Model:###
+### Model:
 name.php (in inc/models/)
 ```php
 <?php
@@ -52,7 +52,7 @@ class nameModel extends Model
 ?>
 ```
 
-###Views:###
+### Views:
 index.php (in inc/views/)
 ```php
 Hello you!
@@ -62,7 +62,7 @@ name.php (in inc/views/)
 Hello <?php echo $this->view_data->name; ?>
 ```
 
-###Html Page:###
+### Html Page:
 index.php (directly executed/visited by users)
 ```php
 require_once('inc/assert.php');
@@ -83,7 +83,7 @@ catch (Exception $e) {
 }
 ```
 
-###Html template:###
+### Html template:
 template/index.php
 ```php
 <!DOCTYPE html>
