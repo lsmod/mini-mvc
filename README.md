@@ -1,7 +1,7 @@
 # mini-mvc
 Minimalist php mvc library under GNU LESSER GENERAL PUBLIC LICENSE
 
-**deprecated prject - here only for historical reasons - don't try to use this in production**
+**DEPRECATED PROJECT - here only for historical reasons - don't try to use this in production**
 
 ## Usage example
 
